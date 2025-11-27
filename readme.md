@@ -73,4 +73,12 @@ This is a **Spring** feature to automatically inject _dependencies_ during run t
 3. Using on setter function
 
 `Ambiguity` in Autowiring:
-If we create 2 beans of same class Spring will get confused which one to inject at run-time. To overcome this we can use `@Qualifier()` annotation. It gives unique names to run-time fields
+If we create 2 beans of same class Spring will get confused which one to inject at run-time. To overcome this we can use `@Qualifier()` annotation. It gives unique names to run-time fields.
+
+---
+
+## Removing XML Configuration
+
+We have 2 ways to inject dependency without `XML Configuration` file. Using `@Component & @ComponentScan` annotations or by annotating a method with `@Bean` annotation.
+
+---
