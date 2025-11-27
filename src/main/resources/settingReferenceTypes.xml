@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.example.springCore.dependencyInjection.setter.ReferenceTypes.Student" name="student">
+        <property name="name" value="Prashant Kumar Jha" />
+        <property name="age" value="23" />
+        <property name="course" value="Java dev" />
+    </bean>
+
+    <bean class="org.example.springCore.dependencyInjection.setter.ReferenceTypes.GetStudentDetails" name="getDetails">
+        <property name="studentObj" ref="student" />
+    </bean>
+
+</beans>

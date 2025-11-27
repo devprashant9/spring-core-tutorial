@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.example.springCore.dependencyInjection.setter.Collections.Student" name="student">
+        <property name="name" value="Prashant Kumar Jha" />
+
+        <property name="addresses">
+            <list>
+                <value>45/B/1 P N Mitra Lane, Kolkata - 700041</value>
+                <value>Sarkar Chowk Marunje, Hinjewadi, Pune - 411057</value>
+                <value>MetroLife PG, Dwarka, Pune - 411033</value>
+            </list>
+        </property>
+
+        <property name="courses">
+            <map>
+                <entry key="JavaScript" value="4" />
+                <entry key="Core java" value="2" />
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

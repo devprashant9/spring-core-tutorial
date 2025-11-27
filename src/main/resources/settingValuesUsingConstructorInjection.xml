@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.example.springCore.dependencyInjection.constructor.Student" name="student">
+
+        <!-- Way 1: Value as a Tag -->
+        <constructor-arg>
+            <value>Prashant Kumar Jha</value>
+        </constructor-arg>
+
+        <!-- Way 1: Value as an Attribute -->
+        <constructor-arg value="23" />
+        <constructor-arg value="Core Java" />
+    </bean>
+
+    <!-- Ambiguity Problem -->
+    <bean class="org.example.springCore.dependencyInjection.constructor.AmbiguityStudent" name="ambiguityStudent">
+        <constructor-arg value="Core Java" type="string" index="1"  />
+        <constructor-arg value="Prashant Kumar Jha" type="string" index="0" />
+    </bean>
+
+</beans>
