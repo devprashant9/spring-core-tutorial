@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Default Scope is Singleton: Returns Same Object -->
+   <bean
+           class="org.example.springCore.dependencyInjection.BeanScope.StudentPrototypeXML"
+           name="studentXML" scope="prototype">
+       <property name="name" value="Prashant Prototype Using XML" />
+   </bean>
+
+</beans>
