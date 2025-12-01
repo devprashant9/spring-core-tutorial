@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- DB Configuration Details -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/testdb</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456789</property>
+
+        <!-- ORM Language Used to Convert Java Code Into SQL -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Extra Properties To Show SQL Queries in Formatted -->
+        <property name="format.sql">true</property>
+        <property name="show_sql">true</property>
+
+        <!-- Handle DB in Different Environment -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Specifying The Classes That Maps To Tables in DB -->
+        <mapping class="org.example.hibernate.studentExample.Student" />
+        <mapping class="org.example.hibernate.embeddedExample.User" />
+    </session-factory>
+</hibernate-configuration>
