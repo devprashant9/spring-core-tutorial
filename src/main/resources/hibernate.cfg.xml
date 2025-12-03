@@ -23,7 +23,24 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Specifying The Classes That Maps To Tables in DB -->
-        <mapping class="org.example.hibernate.studentExample.Student" />
-        <mapping class="org.example.hibernate.embeddedExample.User" />
+
+
+            <!--   OneToOne Uni-Directional     -->
+<!--        <mapping class="org.example.hibernate.mappings.oneToOne.unidirectional.Student" />-->
+<!--        <mapping class="org.example.hibernate.mappings.oneToOne.unidirectional.Certificate" />-->
+
+            <!--   OneToOne Bi-Directional     -->
+<!--        <mapping class="org.example.hibernate.mappings.oneToOne.bidirectional.Student" />-->
+<!--        <mapping class="org.example.hibernate.mappings.oneToOne.bidirectional.Certificate" />-->
+
+            <!--   OneToMany Uni & Bi Directional     -->
+            <mapping class="org.example.hibernate.mappings.oneToMany.Student" />
+            <mapping class="org.example.hibernate.mappings.oneToMany.Certificates" />
+
+        <!--   ManyToMany Uni & Bi Directional     -->
+        <mapping class="org.example.hibernate.mappings.manyToMany.Teams" />
+        <mapping class="org.example.hibernate.mappings.manyToMany.Projects" />
+
+
     </session-factory>
 </hibernate-configuration>
