@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table (name = "PROJECT_TEAM_NAME")
+@Table(name = "PROJECT_TEAM_NAME")
 public class Teams {
 
     @Id
@@ -20,7 +20,9 @@ public class Teams {
     private String teamCode;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(name = "TEAMS_PROJECTS")
+    @JoinTable(name = "TEAMS_PROJECTS",
+            joinColumns = {@JoinColumn(name = "TEAM_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "PROJECTS_ID")})
     private List<Projects> projectsList;
 
     public int getId() {

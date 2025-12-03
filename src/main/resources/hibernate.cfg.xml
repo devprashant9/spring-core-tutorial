@@ -16,7 +16,7 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Extra Properties To Show SQL Queries in Formatted -->
-        <property name="format.sql">true</property>
+        <property name="format_sql">true</property>
         <property name="show_sql">true</property>
 
         <!-- Handle DB in Different Environment -->
@@ -37,9 +37,9 @@
             <mapping class="org.example.hibernate.mappings.oneToMany.Student" />
             <mapping class="org.example.hibernate.mappings.oneToMany.Certificates" />
 
-        <!--   ManyToMany Uni & Bi Directional     -->
-        <mapping class="org.example.hibernate.mappings.manyToMany.Teams" />
-        <mapping class="org.example.hibernate.mappings.manyToMany.Projects" />
+            <!--   ManyToMany Uni & Bi Directional     -->
+<!--            <mapping class="org.example.hibernate.mappings.manyToMany.Teams" />-->
+<!--            <mapping class="org.example.hibernate.mappings.manyToMany.Projects" />-->
 
 
     </session-factory>
