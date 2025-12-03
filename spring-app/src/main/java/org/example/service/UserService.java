@@ -1,19 +1,15 @@
 package org.example.service;
 
-import jakarta.transaction.Transactional;
-import org.example.dao.UserDao;
-import org.example.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.example.model.UserModel;
 
-@Service
-@Transactional
-public class UserService {
+import java.util.List;
 
-    @Autowired
-    private UserDao userDao;
+public interface UserService {
 
-    public int createUser(User user) {
-        return this.userDao.saveUser(user);
-    }
+    List<UserModel> getUsers();
+    UserModel getUser(Integer userId);
+    UserModel createUser(UserModel userModel);
+    UserModel updateUser(UserModel userModel, Integer userId);
+    String deleteUser(Integer UserId);
+
 }
